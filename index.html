@@ -7,12 +7,12 @@
 		<link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
 		<script src="https://cdn.tailwindcss.com"></script>
 	</head>
-	<body class="w-screen h-screen flex bg-slate-100">
-		<div class="flex card card-side w-full m-10 shadow-lg overflow-hidden p-5 bg-white">
-			<div class="w-1/4 bg-purple-800"></div>
-			<form class="h-full w-3/4 py-7 justify-between flex flex-col mx-12">
-				<div class="flex w-full justify-between">
-					<div class="w-[40%] text-sm">
+	<body class="w-screen min-h-screen md:flex bg-slate-100">
+		<div class="flex card card-side w-full md:m-10 m-5 shadow-lg overflow-hidden p-5 bg-white">
+			<div class="w-1/4 hidden bg-purple-800 md:flex card p-5"></div>
+			<form class="h-full w-full md:w-3/4 py-7 justify-between flex flex-col md:mx-12 gap-10 md:gap-0">
+				<div class="flex flex-col md:flex-row w-full justify-between gap-10">
+					<div class="md:w-[40%] text-sm">
 						<div class="font-semibold">First name</div>
 						<input
 							type="text"
@@ -20,7 +20,7 @@
 							placeholder="Seba" />
 					</div>
 
-					<div class="w-[40%] text-sm">
+					<div class="md:w-[40%] text-sm">
 						<div class="font-semibold">First name</div>
 						<input
 							type="text"
@@ -29,8 +29,8 @@
 					</div>
 				</div>
 
-				<div class="flex w-full justify-between">
-					<div class="w-[40%] text-sm">
+				<div class="flex flex-col md:flex-row w-full justify-between gap-10">
+					<div class="md:w-[40%] text-sm">
 						<div class="font-semibold">First name</div>
 						<input
 							type="email"
@@ -38,7 +38,7 @@
 							placeholder="cos@poczta.pl" />
 					</div>
 
-					<div class="w-[40%] text-sm">
+					<div class="md:w-[40%] text-sm">
 						<div class="font-semibold">First name</div>
 						<input
 							type="tel"
@@ -48,7 +48,7 @@
 				</div>
 
 				<h2 class="font-bold">What the of website do you need?</h2>
-				<div class="flex gap-12">
+				<div class="flex flex-col md:flex-row gap-12">
 					<div class="flex gap-2">
 						<input type="radio" name="radio" id="" class="radio checked:bg-purple-800" />
 						<span class="label-text text-lg">Web Design</span>
@@ -68,13 +68,16 @@
 				</div>
 
 				<div>
+					<div class="font-semibold">Message</div>
 					<textarea name="" id="" class="w-full outline-none border-b-2 hover:border-purple-800" placeholder="Write your message..."></textarea>
 				</div>
 
-				<div class="flex justify-end">
+				<div class="flex justify-center md:justify-end">
 					<button class="btn btn-active btn-primary">Send message</button>
 				</div>
 			</form>
 		</div>
+
+		<div class="card w-full md:hidden bg-purple-800 p-5"><div class="absolute bottom-0 right-0 bg-purple-800 w-screen h-5"></div></div>
 	</body>
 </html>
